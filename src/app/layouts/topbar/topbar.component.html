@@ -12,14 +12,7 @@
           </span>
         </a>
 
-        <a routerLink="/" class="logo logo-light">
-          <span class="logo-sm">
-            <img src="assets/images/logo-light.svg" alt="" height="22">
-          </span>
-          <span class="logo-lg">
-            <img src="assets/images/logo-light.png" alt="" height="19">
-          </span>
-        </a>
+
       </div>
 
       <button type="button" class="btn btn-sm px-3 font-size-16 header-item" id="vertical-menu-btn"
@@ -53,25 +46,6 @@
         </div>
       </div>
 
-      <div class="dropdown d-inline-block" ngbDropdown>
-        <button type="button" class="btn header-item" id="page-header-user-dropdown" ngbDropdownToggle>
-          <img *ngIf="flagvalue !== undefined" src="{{flagvalue}}" alt="Header Language" height="16"> <span
-            class="ms-1">{{countryName}}</span>
-          <img *ngIf="flagvalue === undefined" src="{{valueset}}" alt="Header Language" height="16">
-          <span *ngIf="flagvalue === undefined" class="ms-1">English</span>
-        </button>
-        <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
-          <!-- item-->
-          <a href="javascript:void(0);" class="dropdown-item notify-item" *ngFor="let item of listLang"
-            (click)="setLanguage(item.text, item.lang, item.flag)" [ngClass]="{'active': cookieValue === item.lang}">
-            <img src="{{item.flag}}" alt="user-image" class="me-1" height="12"> <span
-              class="align-middle">{{item.text}}</span>
-          </a>
-          <!-- item-->
-        </div>
-      </div>
-
-  
 
    
 
